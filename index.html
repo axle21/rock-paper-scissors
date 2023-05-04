@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="scoreboard">
+        <div class="player-container">
+          <h2>Player</h2>
+          <div class="score-container">
+            <p>Score </p>
+            <h1 id="player-score"></h1>
+          </div>
+        </div>
+        <div class="player-container">
+          <h2>Computer</h2>
+          <div class="score-container">
+            <p>Score </p>
+            <h1 id="computer-score"></h1>
+          </div>
+        </div>
+      </div>
+      <div class="weapons">
+        <div class="weapon paper">
+          <img src="assets/paper.png" onclick="playerMove('paper')" />
+        </div>
+        <div class="weapon scissors">
+          <img src="assets/scissors.png" onclick="playerMove('scissors')" />
+        </div>
+        <div class="weapon rock">
+          <img src="assets/rock.png" onclick="playerMove('rock')" />
+        </div>
+      </div>
+      <div class="contest">
+        <div class="user-weapon">
+          <h1>YOU PICKED</h1>
+          <div class="weapon-image-container">
+            <img id="userPick">
+          </div>
+        </div>
+        <div class="referee">
+          <div class="decision">
+            <h1></h1>
+          </div>
+          <div class="new-game" onclick="restartGame()">Play Again</div>
+        </div>
+        <div class="computer-weapon">
+          <h1>COMPUTER PICKED</h1>
+          <div class="weapon-image-container">
+            <img id="computerPick" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <button onclick="resetGame()">Reset Game</button>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
